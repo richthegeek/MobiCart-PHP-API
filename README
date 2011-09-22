@@ -1,0 +1,21 @@
+A complete PHP implementation of the mobi-cart (http://www.mobi-cart.com) API (http://www.mobi-cart.com/docs/api/index.html).
+
+Work on the mobi-cart API (and all other APIs) has moved to the STD-Rest project (https://github.com/richthegeek/STD-Rest) as this also provides a CoffeeScript implementation.
+
+Here's a clipping from an email conversation from some dude named Rob Halff (hi rob!) asking for help:
+
+	"	The parameters are overwritten in order that they are specified in the code.
+
+		For all methods the username is the first parameter (design flaw really), and so when you do `get(1)` you are setting the username to 1. In order to use a previously defined parameter you need to set the parameter it is in place of to NULL or FALSE (or just exclude it if possible).
+
+		In your case, it'd be one of:
+			$mobi->store->get();
+			$mobi->store->get(false);
+
+		At the moment you typically have to look at the code (or the API docs) to figure out the method signatures - for the most part they follow the API docs but there are one or two places where I think they are rearranged to resolve inconsistencies in the API design.
+	"
+
+The root PHP file also contains a bunch of examples (that is, all my test code) so hopefully that clarifies it to an extent.
+
+
+License: GNU GPLv3 - do what you want, I don't care. Just don't sell it without some kickbacks ;D

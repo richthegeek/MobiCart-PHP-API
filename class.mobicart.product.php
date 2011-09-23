@@ -5,7 +5,7 @@ class Mobicart_Product {
 		$this->api = $api;
 
 		$this->api->add_alias("get_store_products", array($this, "get_all"));
-		$this->api->add_alias("get_deparment_products", array($this, "get_by_department"));
+		$this->api->add_alias("get_department_products", array($this, "get_by_department"));
 		$this->api->add_alias("get_subdepartment_products", array($this, "get_by_subdepartment"));
 		$this->api->add_alias("get_product_details", array($this, "get"));
 		$this->api->add_alias("delete_product", array($this, "delete"));
@@ -115,7 +115,7 @@ class Mobicart_Product {
 				 $product_description = false, $status = false, $f_price = false, $discount = false, $product_image_url = false,
 				 $sale_label = false, $video_url = false, $aggregate_quantity = false, $featured = false) {
 
-		$fields = array("user_name", "product_id", "product_name", "product_description", "status", "f_price",
+		$fields = array("user_name", "department_id", "product_id", "product_name", "product_description", "status", "f_price",
 					"discount", "product_image_url", "sale_label", "video_url", "aggregate_quantity", "featured");
 
 		$this->api->requires("user_name", "department_id", "product_name", "f_price")

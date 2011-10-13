@@ -1,6 +1,15 @@
+===============
+IMPORTANT INFO:
+
+My work on the mobi-cart API (and all other APIs) has moved to
+the STD-Rest project (https://github.com/richthegeek/STD-Rest)
+which provides various benefits including multi-language deployment,
+input validation, better argument handling and smaller filesize.
+
+===============
+
 A complete PHP implementation of the mobi-cart (http://www.mobi-cart.com) API (http://www.mobi-cart.com/docs/api/index.html).
 
-Work on the mobi-cart API (and all other APIs) has moved to the STD-Rest project (https://github.com/richthegeek/STD-Rest) as this also provides a CoffeeScript implementation.
 
 Here's a clipping from an email conversation from some dude named Rob Halff (hi rob!) asking for help:
 
